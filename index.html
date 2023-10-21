@@ -15,22 +15,33 @@
         <div class="options">
             <h2>Options</h2>
             <label>Horizontal direction length:
-                <input type="range">
+                <input type="range" min="-100" max="100" value="10" data-x-direction>
             </label>
             <label>Vertical direction length:
-                <input type="range">
+                <input type="range" min="-100" max="100" value="10" data-y-direction>
             </label>
             <label>Blur Radius:
-                <input type="range">
+                <input type="range" min="0" max="100" value="30" data-blur>
             </label>
             <label>Spread Radius:
-                <input type="range">
+                <input type="range" min="-50" max="50" value="5" data-spread>
             </label>
             <label class="same-line">Shadow Color:
                 <input type="color">
             </label>
             <label class="same-line">Inset Shadow:
                 <input type="checkbox">
+            </label>
+
+            <h3>Preview Options:</h3>
+            <label class="same-line">Background Color:
+                <input type="color">
+            </label>
+            <label class="same-line">Element Background Color:
+                <input type="color">
+            </label>
+            <label>Element Border Radius:
+                <input type="range" min="0" max="100" value="20" data-border-radius>
             </label>
         </div>
         <div class="preview">
@@ -40,16 +51,20 @@
 
                 </div>
             </div>
-            <label class="same-line">Background Color:
+            <!-- <label class="same-line">Background Color:
                 <input type="color">
             </label>
             <label class="same-line">Element Background Color:
                 <input type="color">
             </label>
+            <label>Element Border Radius:
+                <input type="range" min="0" max="100" value="20" data-border-radius>
+            </label> -->
         </div>
         <div class="output">
             <h2>CSS Code</h2>
             <p class="output">box-shadow:</p>
+            <button data-copy>Copy</button>
         </div>
     </main>
 </body>
