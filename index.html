@@ -15,30 +15,30 @@
         <div class="options">
             <h2>Options</h2>
             <label>Horizontal direction length:
-                <input type="range" min="-100" max="100" value="10" data-x-direction>
+                <input type="range" min="-50" max="50" value="10" data-x-direction>
             </label>
             <label>Vertical direction length:
-                <input type="range" min="-100" max="100" value="10" data-y-direction>
+                <input type="range" min="-50" max="50" value="10" data-y-direction>
             </label>
             <label>Blur Radius:
-                <input type="range" min="0" max="100" value="30" data-blur>
+                <input type="range" min="0" max="50" value="20" data-blur>
             </label>
             <label>Spread Radius:
                 <input type="range" min="-50" max="50" value="5" data-spread>
             </label>
             <label class="same-line">Shadow Color:
-                <input type="color">
+                <input type="color" value="#c3c3c3" data-shadow-color>
             </label>
             <label class="same-line">Inset Shadow:
-                <input type="checkbox">
+                <input type="checkbox" data-inset>
             </label>
 
-            <h3>Preview Options:</h3>
+            <h3>Preview Panel:</h3>
             <label class="same-line">Background Color:
-                <input type="color">
+                <input type="color" value="#eeeeee" data-panel-bg>
             </label>
             <label class="same-line">Element's Background Color:
-                <input type="color">
+                <input type="color" value="#ffffff" data-element-bg>
             </label>
             <label>Element's Border Radius:
                 <input type="range" min="0" max="100" value="20" data-border-radius>
@@ -47,7 +47,7 @@
         <div class="preview">
             <h2>Preview</h2>
             <div class="panel">
-                <div class="element">
+                <div class="element" data-element>
 
                 </div>
             </div>
