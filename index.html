@@ -40,8 +40,8 @@
             <label class="same-line">Element's Background Color:
                 <input type="color" value="#ffffff" data-element-bg>
             </label>
-            <label>Element's Border Radius:
-                <input type="range" min="0" max="100" value="10" data-border-radius>
+            <label>Element's Border Radius (%):
+                <input type="range" min="0" max="50" value="5" data-border-radius>
             </label>
         </div>
         <div class="preview">
@@ -51,19 +51,10 @@
 
                 </div>
             </div>
-            <!-- <label class="same-line">Background Color:
-                <input type="color">
-            </label>
-            <label class="same-line">Element Background Color:
-                <input type="color">
-            </label>
-            <label>Element Border Radius:
-                <input type="range" min="0" max="100" value="20" data-border-radius>
-            </label> -->
         </div>
         <div class="output">
             <h2>CSS Code</h2>
-            <p class="output">box-shadow:</p>
+            <p class="output" data-output></p>
             <button data-copy>Copy</button>
         </div>
     </main>

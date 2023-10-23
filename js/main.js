@@ -1,4 +1,4 @@
-import { optionsInputs, previewPanel, previewElement } from "./DOMelems.js";
+import { optionsInputs, previewPanel, previewElement, codeOutput } from "./DOMelems.js";
 
 const generateBoxShadow = () => {
     const xDirection = document.querySelector('[data-x-direction]').value;
@@ -16,11 +16,27 @@ const generateBoxShadow = () => {
     const elementBg = document.querySelector('[data-element-bg]').value;
     previewElement.style.background = elementBg;
     const borderRadius = document.querySelector('[data-border-radius]').value;
-    previewElement.style.borderRadius = `${borderRadius}px`;
+    previewElement.style.borderRadius = `${borderRadius}%`;
+
+    codeOutput.textContent = `box-shadow: ${boxShadow} ${shadowColor};`;
 }
 
 optionsInputs.forEach(input => {
     input.addEventListener('input', generateBoxShadow);
 });
+
+const copyBtn = document.querySelector('[data-copy]');
+
+const copyCode = () => {
+    const cssCode = codeOutput.textContent;
+
+    navigator.clipboard.writeText(cssCode).then(() => {
+        console.log('Code copied');
+    }, (err) => {
+        console.log('Couldn\'t copy code', err);
+    });
+}
+
+copyBtn.addEventListener('click', copyCode);
 
 generateBoxShadow();

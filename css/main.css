@@ -39,6 +39,20 @@ label {
 
 label {
     text-align: left;
+    margin: .5rem 0;
+}
+
+input {
+    cursor: pointer;
+}
+
+input[type='color'],
+input[type='checkbox'] {
+    margin-left: .5rem;
+}
+input[type='checkbox'] {
+    width: 1rem;
+    height: 1rem;
 }
 
 .same-line {
@@ -48,12 +62,12 @@ label {
 .panel {
     width: 100%;
     aspect-ratio: 1 / 1;
-    background-color: #eee;
+    /* background-color: #eee; */
     display: grid;
     place-items: center;
 
     & .element {
-        background-color: #fff;
+        /* background-color: #fff; */
         width: 40%;
         aspect-ratio: 1 / 1;
     }
