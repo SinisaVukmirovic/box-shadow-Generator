@@ -1,6 +1,9 @@
-import { optionsInputs, previewPanel, previewElement, codeOutput } from "./DOMelems.js";
+import { optionsInputs, previewPanel, previewElement, codeOutput, copyBtn } from "./DOMelems.js";
+import './copyCode.js';
 
 const generateBoxShadow = () => {
+    copyBtn.textContent = 'Copy';
+
     const xDirection = document.querySelector('[data-x-direction]').value;
     const yDirection = document.querySelector('[data-y-direction]').value;
     const blur = document.querySelector('[data-blur]').value;
@@ -18,25 +21,27 @@ const generateBoxShadow = () => {
     const borderRadius = document.querySelector('[data-border-radius]').value;
     previewElement.style.borderRadius = `${borderRadius}%`;
 
-    codeOutput.textContent = `box-shadow: ${boxShadow} ${shadowColor};`;
+    codeOutput.textContent = `box-shadow: ${inset ? 'inset' : ''} ${boxShadow} ${shadowColor};`;
 }
 
 optionsInputs.forEach(input => {
     input.addEventListener('input', generateBoxShadow);
 });
 
-const copyBtn = document.querySelector('[data-copy]');
+// const copyBtn = document.querySelector('[data-copy]');
 
-const copyCode = () => {
-    const cssCode = codeOutput.textContent;
+// const copyCode = () => {
+//     copyBtn.textContent = 'Code Copied!';
 
-    navigator.clipboard.writeText(cssCode).then(() => {
-        console.log('Code copied');
-    }, (err) => {
-        console.log('Couldn\'t copy code', err);
-    });
-}
+//     const cssCode = codeOutput.textContent;
 
-copyBtn.addEventListener('click', copyCode);
+//     navigator.clipboard.writeText(cssCode).then(() => {
+//         console.log('Code copied');
+//     }, (err) => {
+//         console.log('Couldn\'t copy code', err);
+//     });
+// }
+
+// copyBtn.addEventListener('click', copyCode);
 
 generateBoxShadow();
