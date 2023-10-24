@@ -1,5 +1,6 @@
 import { optionsInputs, previewPanel, previewElement, codeOutput, copyBtn } from "./DOMelems.js";
 import './copyCode.js';
+import './displayIndicators.js';
 
 const generateBoxShadow = () => {
     copyBtn.textContent = 'Copy';

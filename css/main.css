@@ -72,3 +72,10 @@ input[type='checkbox'] {
         aspect-ratio: 1 / 1;
     }
 }
+
+.indicators {
+    list-style: none;
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+}
