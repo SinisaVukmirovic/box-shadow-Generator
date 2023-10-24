@@ -1,4 +1,5 @@
 @import 'reset.css';
+@import 'rangeInput.css';
 
 body {
     background-color: #222;
@@ -78,4 +79,5 @@ input[type='checkbox'] {
     font-size: .8rem;
     display: flex;
     justify-content: space-between;
+    color: #00b6e8;
 }
