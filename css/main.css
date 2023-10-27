@@ -42,7 +42,7 @@ header {
     text-align: center;
     padding: 1rem;
     letter-spacing: 2px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     & .accent {
         text-transform: uppercase;
@@ -52,7 +52,8 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    /* grid-template-columns: 1fr 2fr; */
+    grid-template-columns: 4fr 9fr;
     column-gap: 5rem;
     row-gap: 1rem;
     /* grid-template-rows: 1fr 1fr; */
@@ -126,7 +127,8 @@ input[type='checkbox'] {
 .code-output {
     padding: 1rem 0;
     background-color: #000;
-    border-radius: .5rem;
+    border-radius: .75rem;
+    outline: 1px solid var(--theme-clr);
     font-family: 'Play';
 }
 
