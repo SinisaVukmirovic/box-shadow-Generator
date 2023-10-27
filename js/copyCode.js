@@ -3,7 +3,7 @@ import { codeOutput, copyBtn } from "./DOMelems.js";
 // const copyBtn = document.querySelector('[data-copy]');
 
 const copyCode = () => {
-    copyBtn.textContent = 'Code Copied!';
+    copyBtn.textContent = 'Copied!';
 
     const cssCode = codeOutput.textContent;
 
