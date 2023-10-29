@@ -15,11 +15,13 @@
     --theme-clr: #00b6e8;
     --bg-clr: #202020;
     --accent: #fff;
+    --text-clr: #bbb;
 }
 
 body {
     background-color: var(--bg-clr);
-    color: #ccc;
+    background-image: linear-gradient(to bottom, #111, #222);
+    color: var(--text-clr);
     font-family: sans-serif;
 
     min-height: 100dvh;
@@ -77,10 +79,11 @@ label {
     font-family: 'Teko';
     font-size: 1.25rem;
     text-align: left;
-}
-label:not(:first-of-type) {
     margin-top: 1rem;
 }
+/* label:not(:first-of-type) {
+    margin-top: 1rem;
+} */
 
 /* input[type='color'],
 input[type='checkbox'] {
@@ -144,4 +147,33 @@ input[type='checkbox'] {
     font-weight: bold;
     letter-spacing: 2px;
     margin-top: .5rem;
+
+    &:hover,
+    &:focus-within {
+        opacity: .9;
+    }
+}
+
+.overlay {
+    display: none;
+
+    & p {
+        font-size: 2rem;
+        color: var(--theme-clr);
+        font-family: 'Play';
+    }
+}
+
+@media (max-width: 1024px) {
+    .overlay {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        inset: 0;
+        background-color: #111;
+    }
+
+    main {
+        display: none;
+    }
 }
